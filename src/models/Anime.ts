@@ -1,3 +1,5 @@
+import { Genre } from "./Genre";
+
 export class Anime {
   numberOfEpisodes: number;
   synopsis: string;
@@ -5,6 +7,8 @@ export class Anime {
   type: string;
   url: string;
   imageUrl: string;
+  genres: Genre[];
+  score: number;
 
   constructor(rawData: any) {
     this.numberOfEpisodes = rawData.episodes;
@@ -13,5 +17,15 @@ export class Anime {
     this.type = rawData.type;
     this.url = rawData.url;
     this.imageUrl = rawData.image_url;
+    this.genres = getGeners(rawData.genres);
+    this.score = rawData.score;
   }
 }
+
+const getGeners = (rawGeners: any[]): Genre[] => {
+  let finalRes: Genre[] = [];
+  rawGeners.forEach((rawGenre) => {
+    finalRes.push(new Genre(rawGenre));
+  });
+  return finalRes;
+};

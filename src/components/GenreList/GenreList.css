@@ -1,0 +1,13 @@
+.genre-list-container {
+  margin-block: 3px;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.genre-list-item {
+  border-radius: 2px;
+  border: 1px solid black;
+  margin: 2px;
+}

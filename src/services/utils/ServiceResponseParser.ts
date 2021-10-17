@@ -1,4 +1,4 @@
-import { Season } from "../models/Season";
+import { Season } from "../../models/Season";
 
 export enum Model {
   SEASON = "season",

@@ -1,0 +1,10 @@
+.anime-list-container {
+  margin-block: 3px;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+}
+
+.anime-list-item {
+  margin-inline: 2px;
+}
