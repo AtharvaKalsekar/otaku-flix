@@ -6,9 +6,9 @@ interface IScore {
 
 const Score = ({ score }: IScore) => {
   return (
-    <div>
-      <h3>{score}/10.0</h3>
-    </div>
+    <>
+      <span>{score}/10.0</span>
+    </>
   );
 };
 

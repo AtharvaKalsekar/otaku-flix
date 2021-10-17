@@ -3,6 +3,8 @@
   padding: 2px;
   display: flex;
   flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .anime-list-item {
