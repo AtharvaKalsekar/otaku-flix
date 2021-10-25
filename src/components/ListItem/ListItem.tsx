@@ -9,13 +9,15 @@ interface IListItem {
 const ListItem = (props: IListItem) => {
   const selfRef = useRef<any>();
 
+  const { id, updateDimension } = props;
+
   useEffect(() => {
-    if (props.id === 0) {
+    if (id === 0) {
       let componentWidth = selfRef.current.getBoundingClientRect().width;
       let componentHeight = selfRef.current.getBoundingClientRect().height;
-      props.updateDimension(componentWidth, componentHeight);
+      updateDimension(componentWidth, componentHeight);
     }
-  }, [props.id]);
+  }, [id, updateDimension]);
 
   return <div ref={selfRef}>{props.children}</div>;
 };

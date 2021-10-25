@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import List from "../List/List";
 import ScrollableList, {
   ScrollDimension,
   ScrollDirection,

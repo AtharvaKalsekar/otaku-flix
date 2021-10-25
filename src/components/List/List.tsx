@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import Card from "../Card/Card";
 import ListItem from "../ListItem/ListItem";
 import "./List.css";
