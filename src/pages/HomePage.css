@@ -1,7 +1,13 @@
 .home-page-container {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 0fr 5fr 0fr;
   align-items: center;
+}
+
+@media screen and (min-width: 380px) {
+  .home-page-container {
+    grid-template-columns: 1fr 5fr 1fr;
+  }
 }
 
 .home-page-container-item {

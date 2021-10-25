@@ -26,7 +26,6 @@ const ScrollableList = (props: IScrollableList) => {
   const [itemWidth, setItemWidth] = useState(1);
 
   const updateListItemDimension = (width: number, height: number) => {
-    console.log("updateListItemDimension => ", width);
     setItemWidth(width);
   };
 

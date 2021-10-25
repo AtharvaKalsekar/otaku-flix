@@ -19,10 +19,19 @@ const Slider = (props: ISlider) => {
   );
   const [scrollableDistance, setScrollableDistance] = useState<number>(0);
 
-  useEffect(() => {
+  const resizeHandler = (event: any) => {
+    updateScrollableDistance();
+  };
+
+  const updateScrollableDistance = () => {
     let scrollableSectionWidth =
       scrollableSection.current.getBoundingClientRect().width;
     setScrollableDistance(scrollableSectionWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resizeHandler);
+    updateScrollableDistance();
   }, []);
 
   const slideLeft = () => {

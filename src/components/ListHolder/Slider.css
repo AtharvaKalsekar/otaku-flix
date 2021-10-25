@@ -21,8 +21,14 @@
 }
 
 .slider-scroll-area {
-  height: 750px;
+  height: 550px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 380px) {
+  .slider-scroll-area {
+    height: 750px;
+  }
 }
