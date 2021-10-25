@@ -11,6 +11,10 @@
   gap: 10px;
   cursor: pointer;
   background: white;
+  transition: transform 0.3s;
+}
+.card-container:hover {
+  transform: scale(1.05);
 }
 
 @media screen and (min-width: 380px) {

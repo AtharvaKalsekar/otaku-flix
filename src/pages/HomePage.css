@@ -1,0 +1,10 @@
+.home-page-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  align-items: center;
+}
+
+.home-page-container-item {
+  margin-inline: 20px;
+  overflow: hidden;
+}

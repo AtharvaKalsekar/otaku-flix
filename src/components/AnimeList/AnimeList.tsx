@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Anime } from "../../models/Anime";
 import Card from "../Card/Card";
+import List from "../List/List";
 import "./AnimeList.css";
 
 interface IAnimeList {
@@ -8,17 +9,7 @@ interface IAnimeList {
 }
 
 const AnimeList = ({ animeList }: IAnimeList) => {
-  return (
-    <div className="anime-list-container">
-      {animeList.map((anime, idx) => {
-        return (
-          <div className="anime-list-item" key={idx}>
-            <Card {...anime} />
-          </div>
-        );
-      })}
-    </div>
-  );
+  return <></>;
 };
 
 export default AnimeList;

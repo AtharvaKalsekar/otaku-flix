@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import AnimeList from "../components/AnimeList/AnimeList";
+import Slider from "../components/ListHolder/Slider";
 import { Anime } from "../models/Anime";
 import { Season } from "../models/Season";
 import { getSeason, ServiceCallback } from "../services/service";
+import "./HomePage.css";
 
 const HomePage = () => {
   let initState: Anime[] = [];
@@ -23,9 +24,12 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Home page here</h1>
-      <AnimeList animeList={allAnime} />
+    <div className="home-page-container">
+      <div></div>
+      <div className="home-page-container-item">
+        <Slider heading={"Season 2018"} list={allAnime} />
+      </div>
+      <div></div>
     </div>
   );
 };

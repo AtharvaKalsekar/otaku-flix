@@ -1,0 +1,11 @@
+.list-container {
+  margin-block: 3px;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  margin-inline: 20px;
+}
+
+.list-item {
+  margin-inline: 2px;
+}

@@ -1,0 +1,11 @@
+.horizontal-scroll {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.horizontal-scroll-flex {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}

@@ -10,9 +10,9 @@ interface IGenreList {
 const GenreList = ({ genres }: IGenreList) => {
   return (
     <div className="genre-list-container">
-      {genres.map((genre) => {
+      {genres.map((genre, idx) => {
         return (
-          <div className="genre-list-item">
+          <div className="genre-list-item" key={idx}>
             <Chip text={genre.name} />
           </div>
         );
