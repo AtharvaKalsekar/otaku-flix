@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Anime } from "../../models/Anime";
 import "./Card.css";
 import CardBack from "./CardBack";
@@ -29,13 +30,21 @@ const Card = (props: Anime) => {
   };
 
   return (
-    <div
-      className="card-container"
-      onMouseOver={onMouseOver}
-      onMouseOut={onMouseOut}
+    <Link
+      to={{
+        pathname: `anime/${props.id}`,
+        state: props,
+      }}
+      style={{ textDecoration: "none", color: "inherit" }}
     >
-      {getBody()}
-    </div>
+      <div
+        className="card-container"
+        onMouseOver={onMouseOver}
+        onMouseOut={onMouseOut}
+      >
+        {getBody()}
+      </div>
+    </Link>
   );
 };
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Slider from "../components/ListHolder/Slider";
-import { Anime } from "../models/Anime";
-import { Season } from "../models/Season";
-import { getSeason, ServiceCallback } from "../services/service";
+import Slider from "../../components/ListHolder/Slider";
+import { Anime } from "../../models/Anime";
+import { Season } from "../../models/Season";
+import { getSeason, ServiceCallback } from "../../services/service";
 import "./HomePage.css";
 
 const HomePage = () => {

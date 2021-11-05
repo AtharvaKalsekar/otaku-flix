@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import ScrollableList, {
   ScrollDimension,
   ScrollDirection,
@@ -19,20 +19,26 @@ const Slider = (props: ISlider) => {
   );
   const [scrollableDistance, setScrollableDistance] = useState<number>(0);
 
-  const resizeHandler = (event: any) => {
-    updateScrollableDistance();
-  };
-
-  const updateScrollableDistance = () => {
+  const updateScrollableDistance = useCallback(() => {
     let scrollableSectionWidth =
       scrollableSection.current.getBoundingClientRect().width;
     setScrollableDistance(scrollableSectionWidth);
-  };
+  }, []);
+
+  const resizeHandler = useCallback(
+    (event: any) => {
+      updateScrollableDistance();
+    },
+    [updateScrollableDistance]
+  );
 
   useEffect(() => {
     window.addEventListener("resize", resizeHandler);
     updateScrollableDistance();
-  }, []);
+    return () => {
+      window.removeEventListener("resize", resizeHandler);
+    };
+  }, [resizeHandler, updateScrollableDistance]);
 
   const slideLeft = () => {
     setNumberOfScrolls(numberOfScrolls - 1);

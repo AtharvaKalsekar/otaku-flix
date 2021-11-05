@@ -1,6 +1,7 @@
 import { Genre } from "./Genre";
 
 export class Anime {
+  id: number;
   numberOfEpisodes: number;
   synopsis: string;
   title: string;
@@ -11,6 +12,7 @@ export class Anime {
   score: number;
 
   constructor(rawData: any) {
+    this.id = rawData.mal_id;
     this.numberOfEpisodes = rawData.episodes;
     this.synopsis = rawData.synopsis;
     this.title = rawData.title;

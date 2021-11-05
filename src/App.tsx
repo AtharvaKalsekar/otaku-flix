@@ -1,12 +1,19 @@
 import React from "react";
 import "./App.css";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ContentDetailsPage from "./pages/ContentDetailsPage/ContentDetailsPage";
 
 function App() {
   return (
-    <div>
-      <HomePage />
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path="/anime/:id" component={ContentDetailsPage} />
+          <Route path="/" component={HomePage} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
