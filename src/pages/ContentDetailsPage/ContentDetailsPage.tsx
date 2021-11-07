@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Promo from "../../components/Promo/Promo";
 import { Anime } from "../../models/Anime";
 import { getPromos, ServiceCallback } from "../../services/service";
 import "./ContentDetailsPage.css";
 import { Promo as PromoModel } from "../../models/Promo";
+import PromoComponent from "../../components/Promo/PromoComponent";
 
 interface IContentDetailsPage {
   location?: any;
@@ -31,7 +31,7 @@ const ContentDetailsPage = (props: IContentDetailsPage) => {
     <div className="content-details-page-container">
       <div></div>
       <div>
-        {promos[0] && <Promo {...promos[0]} />}
+        <PromoComponent promos={promos} />
         <div className="content-details-page-info-container">
           <div className="content-details-page-info-img">
             <img src={anime.imageUrl} className="image"></img>

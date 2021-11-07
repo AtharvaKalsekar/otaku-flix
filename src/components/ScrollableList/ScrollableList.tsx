@@ -32,6 +32,7 @@ const ScrollableList = (props: IScrollableList) => {
   const scrollList = () => {
     let numberOfItems = Math.floor(props.scrollDistance / itemWidth);
     let scrollByDistance = numberOfItems * itemWidth;
+    console.log("scrollList => ", numberOfItems, scrollByDistance);
     if (props.scrollDirection === ScrollDirection.PLUS) {
       selfRef.current.scrollBy(scrollByDistance, 0);
     } else {
