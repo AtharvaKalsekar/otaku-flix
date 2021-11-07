@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Promo } from "../../models/Promo";
 import "./PromoComponent.css";
 import YouTube from "react-youtube";
@@ -30,6 +30,7 @@ const PromoComponent = ({ promos }: IPromoComponent) => {
       controls: 0 as 0 | 1 | undefined,
       origin: "*",
       disablekb: 1 as 0 | 1,
+      rel: 0 as 0 | 1,
       playlist: playList.join(","),
     },
   };

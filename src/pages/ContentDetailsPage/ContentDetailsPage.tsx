@@ -11,11 +11,9 @@ interface IContentDetailsPage {
 
 const ContentDetailsPage = (props: IContentDetailsPage) => {
   const { state } = props.location;
-  //   const anime = state as Anime;
-  console.log("#CDP => ", state);
 
   const [promos, setPromos] = useState<PromoModel[]>([]);
-  const [anime, setAnime] = useState<Anime>(state as Anime);
+  const [anime] = useState<Anime>(state as Anime);
 
   useEffect(() => {
     let cb: ServiceCallback = {
@@ -25,7 +23,7 @@ const ContentDetailsPage = (props: IContentDetailsPage) => {
       onFaliure: (err: any) => {},
     };
     getPromos(cb, anime.id);
-  }, []);
+  }, [anime.id]);
 
   return (
     <div className="content-details-page-container">
@@ -34,7 +32,7 @@ const ContentDetailsPage = (props: IContentDetailsPage) => {
         <PromoComponent promos={promos} />
         <div className="content-details-page-info-container">
           <div className="content-details-page-info-img">
-            <img src={anime.imageUrl} className="image"></img>
+            <img src={anime.imageUrl} className="image" alt="anime cover"></img>
           </div>
           <div className="content-details-page-info-text">
             <div className="header">
