@@ -17,11 +17,17 @@
 
 .content-details-page-info-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   gap: 20px;
   margin-block: 20px;
   border: 1px solid black;
+}
+
+@media screen and (min-width: 380px) {
+  .content-details-page-info-container {
+    flex-direction: row;
+  }
 }
 
 .content-details-page-info-img {

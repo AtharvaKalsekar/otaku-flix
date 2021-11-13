@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 interface IListItem {
   children: any;
   id: number;
-  updateDimension: (width: number, height: number) => void;
+  updateDimension?: (width: number, height: number) => void;
 }
 
 const ListItem = (props: IListItem) => {
@@ -15,7 +15,7 @@ const ListItem = (props: IListItem) => {
     if (id === 0) {
       let componentWidth = selfRef.current.getBoundingClientRect().width;
       let componentHeight = selfRef.current.getBoundingClientRect().height;
-      updateDimension(componentWidth, componentHeight);
+      updateDimension && updateDimension(componentWidth, componentHeight);
     }
   }, [id, updateDimension]);
 

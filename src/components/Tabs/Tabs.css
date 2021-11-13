@@ -1,0 +1,19 @@
+.tab-list {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+  direction: row;
+  align-items: center;
+  justify-self: flex-start;
+  gap: 3px;
+}
+
+.tab-list .item {
+  margin-right: 4px;
+}
+
+.tab-list-active {
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}

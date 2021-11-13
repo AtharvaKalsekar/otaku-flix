@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Slider from "../../components/ListHolder/Slider";
+import Slider from "../../components/Slider/Slider";
 import { Anime } from "../../models/Anime";
 import { Season } from "../../models/Season";
 import { getSeason, ServiceCallback } from "../../services/service";

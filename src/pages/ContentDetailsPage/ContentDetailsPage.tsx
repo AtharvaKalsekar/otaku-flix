@@ -4,6 +4,9 @@ import { getPromos, ServiceCallback } from "../../services/service";
 import "./ContentDetailsPage.css";
 import { Promo as PromoModel } from "../../models/Promo";
 import PromoComponent from "../../components/Promo/PromoComponent";
+import Tabs from "../../components/Tabs/Tabs";
+import EpisodesTab from "../../components/Tabs/EpisodesTab/EpisodesTab";
+import ReviewsTab from "../../components/Tabs/ReviewsTab/ReviewsTab";
 
 interface IContentDetailsPage {
   location?: any;
@@ -41,6 +44,7 @@ const ContentDetailsPage = (props: IContentDetailsPage) => {
             <div className="desc">{anime.synopsis}</div>
           </div>
         </div>
+        <Tabs tabs={[EpisodesTab(), ReviewsTab()]} />
       </div>
       <div></div>
     </div>
