@@ -33,6 +33,7 @@ const EpisodesTab = ({ animeId }: Props): Tab => {
           getListItemComponent={(itemProps: Episode) => (
             <EpisodeComponent {...itemProps} />
           )}
+          numberOfItemsPerPage={5}
         />
       </div>
     );
