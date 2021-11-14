@@ -1,5 +1,5 @@
 import React from "react";
-import "./Chip.css";
+import "./styles.css";
 
 interface IChip {
   text: String;

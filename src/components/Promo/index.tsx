@@ -1,6 +1,6 @@
 import React from "react";
 import { Promo } from "../../models/Promo";
-import "./PromoComponent.css";
+import "./styles.css";
 import YouTube from "react-youtube";
 
 interface IPromoComponent {

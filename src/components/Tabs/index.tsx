@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Tabs.css";
+import "./styles.css";
 import { Tab, TabType } from "./utils";
 
 type Props = {

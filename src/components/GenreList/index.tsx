@@ -1,7 +1,7 @@
 import React from "react";
 import { Genre } from "../../models/Genre";
-import Chip from "../Chip/Chip";
-import "./GenreList.css";
+import Chip from "../Chip";
+import "./styles.css";
 
 interface IGenreList {
   genres: Genre[];

@@ -1,8 +1,8 @@
 import React from "react";
 import { Genre } from "../../models/Genre";
-import GenreList from "../GenreList/GenreList";
-import Score from "../Score/Score";
-import "./Card.css";
+import GenreList from "../GenreList";
+import Score from "../Score";
+import "./styles.css";
 
 interface ICardFront {
   imageUrl: string;

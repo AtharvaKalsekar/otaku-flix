@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Slider from "../../components/Slider/Slider";
+import Slider from "../../components/Slider";
 import { Anime } from "../../models/Anime";
 import { Season } from "../../models/Season";
 import { getSeason, ServiceCallback } from "../../services/service";
-import "./HomePage.css";
+import "./styles.css";
 
 const HomePage = () => {
   let initState: Anime[] = [];
@@ -13,11 +13,10 @@ const HomePage = () => {
   useEffect(() => {
     let cb: ServiceCallback = {
       onSuccess: (response: Season) => {
-        console.log("recieved this", response);
         setAllAnime(response.animeList);
       },
       onFaliure: (err) => {
-        console.log("recieved this error", err);
+        console.error("recieved this error", err);
       },
     };
     getSeason(cb);

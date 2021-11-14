@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import List from "../List/List";
+import List from "../List";
 import "./styles.css";
 
 type Props = {

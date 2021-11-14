@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Anime } from "../../models/Anime";
-import "./Card.css";
+import "./styles.css";
 import CardBack from "./CardBack";
 import CardFront from "./CardFront";
 

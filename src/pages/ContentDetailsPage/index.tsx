@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Anime } from "../../models/Anime";
 import { getPromos, ServiceCallback } from "../../services/service";
-import "./ContentDetailsPage.css";
 import { Promo as PromoModel } from "../../models/Promo";
-import PromoComponent from "../../components/Promo/PromoComponent";
-import Tabs from "../../components/Tabs/Tabs";
-import EpisodesTab from "../../components/Tabs/EpisodesTab/EpisodesTab";
-import ReviewsTab from "../../components/Tabs/ReviewsTab/ReviewsTab";
+import PromoComponent from "../../components/Promo";
+import Tabs from "../../components/Tabs";
+import EpisodesTab from "../../components/Tabs/EpisodesTab";
+import ReviewsTab from "../../components/Tabs/ReviewsTab";
+import "./styles.css";
 
 interface IContentDetailsPage {
   location?: any;

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import List from "../List/List";
-import "./ScrollableList.css";
+import List from "../List";
+import "./styles.css";
 
 export enum ScrollDimension {
   X = "x",

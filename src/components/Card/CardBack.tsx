@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card.css";
+import "./styles.css";
 
 interface ICardBack {
   synopsis: String;

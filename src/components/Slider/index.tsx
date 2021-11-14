@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { Anime } from "../../models/Anime";
-import Card from "../Card/Card";
+import Card from "../Card";
 import ScrollableList, {
   ScrollDimension,
   ScrollDirection,
-} from "../ScrollableList/ScrollableList";
-import "./Slider.css";
+} from "../ScrollableList";
+import "./styles.css";
 
 interface ISlider {
   heading: string;
