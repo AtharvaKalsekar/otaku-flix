@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Body from "./Body/Body";
-import Header from "./Header/Header";
 import "./Tabs.css";
 import { Tab, TabType } from "./utils";
 
@@ -15,11 +13,15 @@ const Tabs = ({ tabs }: Props) => {
     setActiveTab(tabType);
   };
 
-  const getHead = (tab: Tab): JSX.Element => {
+  const getHead = (tab: Tab, idx): JSX.Element => {
     let isActive = activeTab === tab.type;
-    let styleClass = isActive ? "item-active" : "item";
+    let styleClass = isActive ? "item active" : "item";
     return (
-      <div className={styleClass} onClick={() => onClickHead(tab.type)}>
+      <div
+        className={styleClass}
+        onClick={() => onClickHead(tab.type)}
+        key={idx}
+      >
         {tab.title}
       </div>
     );
@@ -33,8 +35,8 @@ const Tabs = ({ tabs }: Props) => {
   return (
     <div className="tabs">
       <div className="tab-list">
-        {tabs.map((tab) => {
-          return getHead(tab);
+        {tabs.map((tab, idx) => {
+          return getHead(tab, idx);
         })}
       </div>
       <div>{getBody()}</div>

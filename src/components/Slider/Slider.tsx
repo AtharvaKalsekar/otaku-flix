@@ -1,4 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { Anime } from "../../models/Anime";
+import Card from "../Card/Card";
 import ScrollableList, {
   ScrollDimension,
   ScrollDirection,
@@ -73,6 +75,7 @@ const Slider = (props: ISlider) => {
           scrollDirection={scrollDirection}
           scrollDistance={scrollableDistance}
           list={props.list}
+          getListItemComponent={(itemProps: Anime) => <Card {...itemProps} />}
         />
       </div>
     </div>

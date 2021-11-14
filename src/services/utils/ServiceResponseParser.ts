@@ -1,3 +1,4 @@
+import { Episode } from "../../models/Episode";
 import { Promo } from "../../models/Promo";
 import { Season } from "../../models/Season";
 
@@ -21,4 +22,12 @@ export const parsePromos = (rawPromos: any[]): Promo[] => {
     promos.push(new Promo(promoRaw));
   });
   return promos;
+};
+
+export const parseEpisodes = (rawEpisodes: any[]): Episode[] => {
+  let episodes: Episode[] = [];
+  rawEpisodes.forEach((rawEpisode) => {
+    episodes.push(new Episode(rawEpisode));
+  });
+  return episodes;
 };

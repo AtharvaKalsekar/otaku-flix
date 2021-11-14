@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 780px) {
   .content-details-page-container {
     grid-template-columns: 1fr 5fr 1fr;
   }
@@ -24,7 +24,7 @@
   border: 1px solid black;
 }
 
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 780px) {
   .content-details-page-info-container {
     flex-direction: row;
   }

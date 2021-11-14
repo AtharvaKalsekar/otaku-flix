@@ -2,10 +2,21 @@
   margin-block: 3px;
   padding: 2px;
   display: flex;
-  flex-direction: row;
   margin-inline: 20px;
 }
 
-.list-item {
+.list-x {
+  flex-direction: row;
+}
+
+.list-y {
+  flex-direction: column;
+}
+
+.list-x-item {
   margin-inline: 2px;
+}
+
+.list-y-item {
+  margin-block: 2px;
 }

@@ -5,23 +5,38 @@ import "./List.css";
 
 interface IList {
   items: any[];
-  updateListItemDimension: (width: number, height: number) => void;
+  listDimenison: "x" | "y";
+  updateListItemDimension?: (width: number, height: number) => void;
+  getListItemComponent: (itemProps: any) => JSX.Element;
 }
 
-const List = ({ items, updateListItemDimension }: IList) => {
+const List = ({
+  items,
+  updateListItemDimension,
+  getListItemComponent,
+  listDimenison,
+}: IList) => {
+  const getListStyle = () => {
+    return `list-container list-${listDimenison}`;
+  };
+
+  const getListItemStyle = () => {
+    return `list-${listDimenison}-item`;
+  };
+
   return (
-    <div className="list-container">
+    <div className={getListStyle()}>
       {items.map((item, idx) => {
         return (
-          <ListItem
-            id={idx}
-            updateDimension={updateListItemDimension}
-            key={idx}
-          >
-            <div className="list-item" id={`#${idx}`}>
-              <Card {...item} />
-            </div>
-          </ListItem>
+          <div className={getListItemStyle()} id={`#${idx}`} key={idx}>
+            <ListItem
+              id={idx}
+              updateDimension={updateListItemDimension}
+              key={idx}
+            >
+              {getListItemComponent(item)}
+            </ListItem>
+          </div>
         );
       })}
     </div>

@@ -1,6 +1,8 @@
+import { Episode } from "../models/Episode";
 import { Promo } from "../models/Promo";
 import {
   Model,
+  parseEpisodes,
   parsePromos,
   parseResponse,
 } from "./utils/ServiceResponseParser";
@@ -32,6 +34,20 @@ export const getPromos = (cb: ServiceCallback, animeId: number) => {
     .then((jsonData) => {
       let promos: Promo[] = parsePromos(jsonData.promo);
       cb.onSuccess(promos);
+    })
+    .catch((err) => {
+      cb.onFaliure(err);
+    });
+};
+
+export const getEpisodes = (cb: ServiceCallback, animeId: number) => {
+  fetch(`https://api.jikan.moe/v3/anime/${animeId}/episodes/1`, {
+    method: "GET",
+  })
+    .then((response) => response.json())
+    .then((jsonData) => {
+      let episodes: Episode[] = parseEpisodes(jsonData.episodes);
+      cb.onSuccess(episodes);
     })
     .catch((err) => {
       cb.onFaliure(err);
