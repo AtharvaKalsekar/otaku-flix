@@ -1,4 +1,4 @@
-.episode-container {
+.review-container {
   display: flex;
   flex-direction: row;
   border-radius: 4px;
@@ -12,33 +12,26 @@
   cursor: pointer;
 }
 
-.episode-container:hover {
+.review-container:hover {
   transform: scale(1.05);
 }
 
-.episode-container .image-container {
-  max-width: 30%;
-  flex-grow: 4;
+.review-container .image-container {
+  width: 30%;
 }
 
-.episode-container .image-container .image {
+.review-container .image-container .image {
   width: 100%;
   object-fit: cover;
 }
 
-.episode-container .details {
-  max-width: 70%;
-  flex-grow: 8;
+.review-container .details {
+  flex-grow: 11;
   display: flex;
   flex-direction: column;
 }
 
-.episode-container .details .heading {
+.review-container .details .heading {
   font-size: x-large;
-  font-weight: bold;
-}
-
-.episode-container .details .sub-heading {
-  font-size: small;
   font-weight: bold;
 }

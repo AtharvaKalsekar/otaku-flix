@@ -44,7 +44,12 @@ const ContentDetailsPage = (props: IContentDetailsPage) => {
             <div className="desc">{anime.synopsis}</div>
           </div>
         </div>
-        <Tabs tabs={[EpisodesTab({ animeId: anime.id }), ReviewsTab()]} />
+        <Tabs
+          tabs={[
+            EpisodesTab({ animeId: anime.id }),
+            ReviewsTab({ animeId: anime.id }),
+          ]}
+        />
       </div>
       <div></div>
     </div>

@@ -1,0 +1,26 @@
+.ratings-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.ratings-container__item {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 3px;
+  margin: 2px;
+}
+
+.ratings-container__label {
+  display: flex;
+  font-size: large;
+  font-weight: 700;
+  align-items: center;
+}
+
+.ratings-container__progress {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}

@@ -1,5 +1,6 @@
 import { Episode } from "../../models/Episode";
 import { Promo } from "../../models/Promo";
+import { Review } from "../../models/Review";
 import { Season } from "../../models/Season";
 
 export enum Model {
@@ -30,4 +31,12 @@ export const parseEpisodes = (rawEpisodes: any[]): Episode[] => {
     episodes.push(new Episode(rawEpisode));
   });
   return episodes;
+};
+
+export const parseReviews = (rawReviews: any[]): Review[] => {
+  let reviews: Review[] = [];
+  rawReviews.forEach((rawReview) => {
+    reviews.push(new Review(rawReview));
+  });
+  return reviews;
 };

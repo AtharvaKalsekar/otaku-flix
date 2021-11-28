@@ -1,0 +1,19 @@
+.progress-ring-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-ring__circle {
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 1.3s;
+  background-color: transparent;
+}
+
+.progress-ring__text {
+  text-anchor: middle;
+  dominant-baseline: middle;
+  font-size: large;
+  font-weight: 900;
+}
