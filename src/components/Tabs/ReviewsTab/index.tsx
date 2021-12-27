@@ -29,6 +29,7 @@ const ReviewsTab = ({ animeId }): Tab => {
           getListItemComponent={(review: Review) => (
             <ContentReview review={review} />
           )}
+          numberOfItemsPerPage={5}
         />
       </div>
     );

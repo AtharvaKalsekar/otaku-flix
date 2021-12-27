@@ -52,14 +52,16 @@ export class Review {
   scores: ReviewScores;
   helpfulCount: number;
   date: string;
+  content: string;
 
   constructor(rawData: any) {
     this.id = rawData.mal_id;
     this.url = rawData.reviewer.url;
     this.imageUrl = rawData.reviewer.image_url;
-    this.userName = rawData.reviewer.user_name;
+    this.userName = rawData.reviewer.username;
     this.episodesSeen = rawData.reviewer.episodes_seen;
     this.scores = new ReviewScores(rawData.reviewer.scores);
+    this.content = rawData.content;
     this.helpfulCount = rawData.helpful_count;
     this.date = rawData.date;
   }
