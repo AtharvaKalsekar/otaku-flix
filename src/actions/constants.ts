@@ -2,3 +2,9 @@ export const ModalAction = {
   SHOW_MODAL: "SHOW_MODAL",
   HIDE_MODAL: "HIDE_MODAL",
 };
+
+export const SearchBarAction = {
+  SEARCH_QUERY: "SEARCH_QUERY",
+  SEARCH_QUERY_SUCCESS: "SEARCH_QUERY_SUCCESS",
+  SEARCH_QUERY_FAIL: "SEARCH_QUERY_FAIL",
+};

@@ -20,13 +20,3 @@ export const modalReducer = (state = {}, action) => {
       return state;
   }
 };
-
-export const hideModalReducer = (state, action) => {
-  switch (action.type) {
-    case ModalAction.HIDE_MODAL:
-      return {
-        ...state,
-        modalComponent: null,
-      };
-  }
-};
